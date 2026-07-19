@@ -793,16 +793,18 @@
 
   document.getElementById('formulario-senha').addEventListener('submit', function (evento) {
     evento.preventDefault();
-    const valorDigitado = document.getElementById('campo-senha').value;
+    const valorDigitado = document.getElementById('campo-senha').value.trim();
     const mensagemErro = document.getElementById('mensagem-erro-senha');
+    const senhaCorreta = atob(SENHA_BASE64);
 
-    if (btoa(valorDigitado) === SENHA_BASE64) {
+    if (valorDigitado === senhaCorreta) {
       mensagemErro.textContent = '';
       document.getElementById('tela-senha').setAttribute('hidden', 'hidden');
       document.getElementById('app').removeAttribute('hidden');
       iniciarPortal();
     } else {
       mensagemErro.textContent = 'Senha incorreta. Tente novamente.';
+      console.log('Tentativa de acesso: comprimento digitado = ' + valorDigitado.length + ', comprimento esperado = ' + senhaCorreta.length);
     }
   });
 
