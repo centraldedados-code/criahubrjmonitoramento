@@ -649,7 +649,7 @@
     <div class="caixa-login-branca">
       <img class="logo-caixa-login" src="assets/logo_preta.png" alt="CRIA HUB">
       <h2 class="titulo-sistema">Sistema de Monitoramento Operacional</h2>
-      <p class="subtitulo-sistema">Acesso restrito - Coordenacao Instituto BR Arte</p>
+      <p class="subtitulo-sistema">Acesso restrito - Coordenação Instituto BR Arte</p>
 
       <form id="formulario-senha" autocomplete="off">
         <input type="password" id="campo-senha" placeholder="Senha de acesso" required>
@@ -659,7 +659,7 @@
     </div>
 
     <div class="regua-container">
-      <img src="logo%20cor.png" alt="Instituto BR Arte e Ministerio do Trabalho e Emprego">
+      <img src="logo%20cor.png" alt="Instituto BR Arte e Ministério do Trabalho e Emprego">
     </div>
   </div>
 </div>
@@ -747,7 +747,7 @@
       <div class="cabecalho-view">
         <div>
           <h1>Galeria de Evidencias</h1>
-          <p>Registros fotograficos e de campo, organizados conforme a Matriz Consolidada de Evidencias.</p>
+          <p>Registros fotograficos e de campo, organizados conforme a Matriz Consolidada de Evidências.</p>
         </div>
       </div>
       <div id="conteudo-galeria"><div class="estado-carregando">Carregando galeria...</div></div>
@@ -757,10 +757,10 @@
       <div class="cabecalho-view">
         <div>
           <h1>Sobre o Projeto</h1>
-          <p>Identificacao, objeto, publico-alvo e equipe tecnica do CRIA HUB RJ.</p>
+          <p>Identificação, objeto, público-alvo e equipe técnica do CRIA HUB RJ.</p>
         </div>
       </div>
-      <div id="conteudo-sobre"><div class="estado-carregando">Carregando informacoes...</div></div>
+      <div id="conteudo-sobre"><div class="estado-carregando">Carregando informações...</div></div>
     </section>
 
   </main>
@@ -900,7 +900,7 @@
       const blocosComCritico = resumo.statusPorBloco.filter(function (b) { return b.criticos > 0; });
       html += '<div class="alerta-critico">';
       html += '<h3>' + resumo.totalCriticos + ' item(ns) em estado critico</h3>';
-      html += '<p>Pastas com pouca ou nenhuma evidencia enviada em relacao ao esperado. Priorize estes blocos:</p>';
+      html += '<p>Pastas com pouca ou nenhuma evidencia enviada em relação ao esperado. Priorize estes blocos:</p>';
       html += '<ul>';
       blocosComCritico.forEach(function (b) {
         html += '<li><strong>' + b.criticos + '</strong> em ' + escaparHtml(b.bloco) + '</li>';
@@ -913,7 +913,7 @@
     html += cartaoIndicador(resumo.totalMetas, 'Metas do Plano de Trabalho');
     html += cartaoIndicador(resumo.totalTurmas, 'Turmas ofertadas');
     html += cartaoIndicador(resumo.totalVagas, 'Vagas ofertadas');
-    html += cartaoIndicador(resumo.percentualConcluido + '%', 'Evidencias concluidas');
+    html += cartaoIndicador(resumo.percentualConcluido + '%', 'Evidências concluidas');
     html += cartaoIndicador(resumo.totalCriticos, 'Itens criticos', resumo.totalCriticos > 0);
     html += '</div>';
 
@@ -928,7 +928,7 @@
       }
       html += '</div>';
       html += '<div class="barra-progresso-fundo"><div class="barra-progresso-preenchida" style="width:' + meta.percentualConcluido + '%"></div></div>';
-      html += '<div style="font-size:13px;color:#5A6472;">' + meta.realizados + ' de ' + (meta.totalItens - meta.naoSeAplica) + ' evidencias realizadas (' + meta.percentualConcluido + '%)</div>';
+      html += '<div style="font-size:13px;color:#5A6472;">' + meta.realizados + ' de ' + (meta.totalItens - meta.naoSeAplica) + ' evidências realizadas (' + meta.percentualConcluido + '%)</div>';
       html += '</div>';
     });
     html += '</div>';
@@ -950,7 +950,7 @@
     html += '<div class="grade-metas">' + dados.metasOficiais.map(cartaoBloco).join('') + '</div>';
 
     html += '<div class="secao-titulo">Categorias complementares de evidencia</div>';
-    html += '<p style="color:#5A6472;font-size:13.5px;margin:-6px 0 14px 0;max-width:640px;">Categorias exigidas pelo Mapa de Prestacao de Contas que nao sao metas formais do Plano de Trabalho, mas que tambem precisam de evidencia documental.</p>';
+    html += '<p style="color:#5A6472;font-size:13.5px;margin:-6px 0 14px 0;max-width:640px;">Categorias exigidas pelo Mapa de Prestação de Contas que não são metas formais do Plano de Trabalho, mas que tambem precisam de evidencia documental.</p>';
     html += '<div class="grade-metas">' + dados.categoriasComplementares.map(cartaoBloco).join('') + '</div>';
 
     document.getElementById('conteudo-metas').innerHTML = html;
@@ -1102,12 +1102,12 @@
     html += '<div>';
     html += '<div class="cartao-sobre">';
     html += '<h3>Objeto</h3>';
-    html += '<p>O projeto contribui para a transformacao social de uma regiao de baixo indice de desenvolvimento social na cidade do Rio de Janeiro, capacitando a populacao em habilidades relevantes para o mercado de trabalho, com foco em tecnologia, negocios e midias sociais.</p>';
+    html += '<p>O projeto contribui para a transformação social de uma região de baixo índice de desenvolvimento social na cidade do Rio de Janeiro, capacitando a população em habilidades relevantes para o mercado de trabalho, com foco em tecnologia, negocios e midias sociais.</p>';
     html += '</div>';
 
     html += '<div class="cartao-sobre">';
     html += '<h3>Publico-alvo</h3>';
-    html += '<p>Populacao economicamente ativa da regiao de Santa Cruz, com atencao a grupos historicamente marginalizados: pessoas com deficiencia, idosos, jovens, mulheres, pessoas negras, pessoas LGBTQIAPN+ e povos e comunidades tradicionais, alem de trabalhadores de setores estrategicos para a economia local.</p>';
+    html += '<p>Populacao economicamente ativa da regiao de Santa Cruz, com atenção a grupos historicamente marginalizados: pessoas com deficiência, idosos, jovens, mulheres, pessoas negras, pessoas LGBTQIAPN+ e povos e comunidades tradicionais, alem de trabalhadores de setores estrategicos para a economia local.</p>';
     html += '</div>';
 
     html += '<div class="cartao-sobre">';
@@ -1117,7 +1117,7 @@
 
     html += '<div class="cartao-sobre">';
     html += '<h3>Equipe tecnica</h3>';
-    html += '<p>Coordenador Geral, Coordenador Digital, Coordenador Pedagogico e Instrutores atuam diretamente no contato com os alunos, com apoio de Direcao Geral, Planejamento Pedagogico e Apoio Administrativo na gestao do projeto.</p>';
+    html += '<p>Coordenador Geral, Coordenador Digital, Coordenador Pedagógico e Instrutores atuam diretamente no contato com os alunos, com apoio de Direção Geral, Planejamento Pedagogico e Apoio Administrativo na gestao do projeto.</p>';
     html += '</div>';
     html += '</div>';
 
