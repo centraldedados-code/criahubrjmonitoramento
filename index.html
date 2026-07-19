@@ -844,7 +844,7 @@
         renderizarSobre(dados);
       })
       .catch(function (erro) {
-        const mensagem = '<div class="estado-erro">Nao foi possivel carregar os dados do portal. Verifique se a URL do Web App em APPS_SCRIPT_URL esta correta e se a implantacao esta ativa.<br><br>Detalhe tecnico: ' + escaparHtml(String(erro)) + '</div>';
+        const mensagem = '<div class="estado-erro">Nao foi possivel carregar os dados do portal. Verifique se a URL do Web App em APPS_SCRIPT_URL esta correta e se a implantação esta ativa.<br><br>Detalhe tecnico: ' + escaparHtml(String(erro)) + '</div>';
         ['dashboard', 'metas', 'cursos', 'documentos', 'galeria', 'sobre'].forEach(function (view) {
           document.getElementById('conteudo-' + view).innerHTML = mensagem;
         });
@@ -950,7 +950,7 @@
     html += '<div class="grade-metas">' + dados.metasOficiais.map(cartaoBloco).join('') + '</div>';
 
     html += '<div class="secao-titulo">Categorias complementares de evidencia</div>';
-    html += '<p style="color:#5A6472;font-size:13.5px;margin:-6px 0 14px 0;max-width:640px;">Categorias exigidas pelo Mapa de Prestação de Contas que não são metas formais do Plano de Trabalho, mas que tambem precisam de evidencia documental.</p>';
+    html += '<p style="color:#5A6472;font-size:13.5px;margin:-6px 0 14px 0;max-width:640px;">Categorias exigidas pelo Mapa de Prestação de Contas que não são metas formais do Plano de Trabalho, mas que tambem precisam de evidência documental.</p>';
     html += '<div class="grade-metas">' + dados.categoriasComplementares.map(cartaoBloco).join('') + '</div>';
 
     document.getElementById('conteudo-metas').innerHTML = html;
@@ -1112,12 +1112,12 @@
 
     html += '<div class="cartao-sobre">';
     html += '<h3>Metodologia</h3>';
-    html += '<p>Dez turmas de 34 vagas cada (4 reservadas para PCD), com carga horaria de 150 horas por turma em formato hibrido: 75 horas presenciais e 75 horas a distancia. Frequencia minima de 75% para aprovacao. Os alunos recebem apostila impressa, kit de material, camisas, transporte e lanche durante as atividades presenciais.</p>';
+    html += '<p>Dez turmas de 34 vagas cada (4 reservadas para PCD), com carga horaria de 150 horas por turma em formato hibrido: 75 horas presenciais e 75 horas a distancia. Frequencia minima de 75% para aprovação. Os alunos recebem apostila impressa, kit de material, camisas, transporte e lanche durante as atividades presenciais.</p>';
     html += '</div>';
 
     html += '<div class="cartao-sobre">';
     html += '<h3>Equipe tecnica</h3>';
-    html += '<p>Coordenador Geral, Coordenador Digital, Coordenador Pedagógico e Instrutores atuam diretamente no contato com os alunos, com apoio de Direção Geral, Planejamento Pedagogico e Apoio Administrativo na gestao do projeto.</p>';
+    html += '<p>Coordenador Geral, Coordenador Digital, Coordenador Pedagógico e Instrutores atuam diretamente no contato com os alunos, com apoio de Direção Geral, Planejamento Pedagógico e Apoio Administrativo na gestão do projeto.</p>';
     html += '</div>';
     html += '</div>';
 
