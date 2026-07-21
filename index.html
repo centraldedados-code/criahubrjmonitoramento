@@ -827,6 +827,22 @@
   });
 
   // ---------------------------------------------------------------
+  // ACORDEAO DOS CARDS (METAS E CURSOS) - delegacao de evento
+  // Anexado UMA UNICA VEZ, no elemento #conteudo, que existe fixo no
+  // HTML desde o carregamento da pagina e nunca e recriado. Como o
+  // #conteudo nunca muda, esse listener nunca duplica, mesmo que
+  // renderizarMetas()/renderizarCursos() rodem varias vezes e
+  // redesenhem os cards por dentro dele.
+  // ---------------------------------------------------------------
+
+  document.getElementById('conteudo').addEventListener('click', function (evento) {
+    const cabecalho = evento.target.closest('.cartao-bloco-cabecalho');
+    if (cabecalho) {
+      cabecalho.closest('.cartao-bloco').classList.toggle('aberto');
+    }
+  });
+
+  // ---------------------------------------------------------------
   // CARREGAMENTO DE DADOS
   // ---------------------------------------------------------------
 
@@ -954,12 +970,6 @@
     html += '<div class="grade-metas">' + dados.categoriasComplementares.map(cartaoBloco).join('') + '</div>';
 
     document.getElementById('conteudo-metas').innerHTML = html;
-
-    document.querySelectorAll('.cartao-bloco-cabecalho').forEach(function (cabecalho) {
-      cabecalho.addEventListener('click', function () {
-        cabecalho.closest('.cartao-bloco').classList.toggle('aberto');
-      });
-    });
   }
 
   function cartaoBloco(bloco) {
@@ -1005,12 +1015,6 @@
   function renderizarCursos(dados) {
     const html = '<div class="grade-cursos">' + dados.cursos.map(cartaoCurso).join('') + '</div>';
     document.getElementById('conteudo-cursos').innerHTML = html;
-
-    document.querySelectorAll('.cartao-bloco-cabecalho').forEach(function (cabecalho) {
-      cabecalho.addEventListener('click', function () {
-        cabecalho.closest('.cartao-bloco').classList.toggle('aberto');
-      });
-    });
   }
 
   function cartaoCurso(curso) {
